@@ -31,29 +31,27 @@ mongoose.connect(process.env.MONGO_URI)
 .catch((err) => console.error("MongoDB error:", err))
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(process.cwd(), "public", "createBtn.html"))
+    res.sendFile(path.join(__dirname, "public", "createBtn.html"))
 })
 
 app.get("/login", (req, res) => {
-    res.sendFile(path.join(process.cwd(), "public", "login.html"))
+    res.sendFile(path.join( __dirname, "public", "login.html"))
 })
 
-app.get("/signup", (req, res) => {
-    console.log("CWD:", process.cwd());
-    console.log("__dirname:", __dirname);
-    res.sendFile(path.join(process.cwd(), "public", "signup.html"))
+app.get("/signup", (req,res) => {
+    res.sendFile(path.join(__dirname,  "public", "signup.html"))
 })
 
-app.get("/create-poll", authMiddleware, (req, res) => {
-    res.sendFile(path.join(process.cwd(), "public", "createPoll.html"))
+app.get("/create-poll", authMiddleware, (req,res) => {
+    res.sendFile(path.join(__dirname, "public", "createPoll.html"))
 })
 
 app.get("/poll/:id/responses", (req, res) => {
-    res.sendFile(path.join(process.cwd(), "public", "responsePage.html"))
+    res.sendFile(path.join(__dirname, "public", "responsePage.html"))
 })
 
 app.get("/poll/:id", (req, res) => {
-    res.sendFile(path.join(process.cwd(), "public", "displayPoll.html"))
+    res.sendFile(path.join(__dirname, "public", "displayPoll.html"))
 })
 
 app.get("/logout", (req,res) => {
