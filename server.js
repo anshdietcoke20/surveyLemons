@@ -39,6 +39,8 @@ app.get("/login", (req, res) => {
 })
 
 app.get("/signup", (req, res) => {
+    console.log("CWD:", process.cwd());
+    console.log("__dirname:", __dirname);
     res.sendFile(path.join(process.cwd(), "public", "signup.html"))
 })
 
