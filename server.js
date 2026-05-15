@@ -39,7 +39,7 @@ app.get("/login", (req, res) => {
 })
 
 app.get("/signup", (req,res) => {
-    res.sendFile(path.join(__dirname,  "public", "signup.html"))
+    res.sendFile(path.join(__dirname,  "public", "signUp.html"))
 })
 
 app.get("/create-poll", authMiddleware, (req,res) => {
