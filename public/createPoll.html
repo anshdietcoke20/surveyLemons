@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="createPoll.css">
+</head>
+<body>
+    <div class="card-stack">
+
+        <div class="card active" id="card-0">
+        <input type="text" placeholder="Enter your question here" class="question-input">
+
+        <div class="toggle-row">
+            <label>
+                <input type="checkbox" class="required-checkbox"> Required
+            </label>
+        </div>
+
+        <div id="options">
+            <input type="text" placeholder="Option 1" class="pick">
+            <input type="text" placeholder="Option 2" class="pick">
+            <input type="text" placeholder="Option 3" class="pick">
+            <input type="text" placeholder="Option 4" class="pick">
+        </div>
+    </div>
+        </div>
+       
+         <div class="bottom-bar">
+            <button id="add-question">Add Question</button>
+            <button id="create-poll">Create Poll</button>
+        </div>
+
+    <script src="createPoll.js"></script>
+</body>
+</html>

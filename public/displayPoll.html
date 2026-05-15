@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseBoard</title>
+    <link rel="stylesheet" href="/displayPoll.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script src="/socket.io/socket.io.js"></script>
+
+</head>
+<body>
+    
+        <div class="heading">
+            <h2>Real Time Voting Application <i class="ri-chat-poll-line"></i> </h2>
+        </div>
+
+        <div class="card-stack"></div>
+
+        <div class="bottom-bar">
+            <button id="prev-btn"><i class="ri-arrow-left-line"></i> Previous </button>
+            <span id="progress"> 1/1 </span>
+            <button id="next-btn">Next <i class="ri-arrow-right-line"></i> </button>
+        </div>
+
+         <div class="bottom-bar">
+            <button id="submit-btn"><i class="ri-send-plane-line"></i> Submit</button>
+        </div>
+
+        <div id="mandatory-popup" style="display: none">
+            <p>Mandatory question!</p>
+        </div>
+                 
+    <script src="/index.js"></script>
+</body>
+</html>
+ 

@@ -1,0 +1,195 @@
+* {
+margin : 0;
+padding : 0;
+box-sizing : border-box;
+}
+ body {
+            min-height: 100vh;
+            background-color: #fffde7;
+            color: #003f88;
+            font-family: sans-serif;
+            padding: 40px 20px;
+        }
+ 
+        .heading {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+ 
+        .heading h1 {
+            font-size: 28px;
+            font-weight: 800;
+            color: #003f88;
+        }
+ 
+        .heading p {
+            margin-top: 6px;
+            font-size: 14px;
+            color: #00296b;
+            opacity: 0.7;
+        }
+ 
+        .summary-row {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+ 
+        .summary-card {
+            background: #fff;
+            border: 2px solid #003f88;
+            border-radius: 16px;
+            padding: 24px 32px;
+            text-align: center;
+            min-width: 160px;
+            box-shadow: 6px 6px 0px #003f88;
+        }
+ 
+        .summary-card .stat-number {
+            font-size: 36px;
+            font-weight: 900;
+            color: #003f88;
+        }
+ 
+        .summary-card .stat-label {
+            font-size: 13px;
+            color: #00296b;
+            margin-top: 4px;
+            font-weight: 600;
+            opacity: 0.75;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+ 
+        .questions-section {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+ 
+        .question-card {
+            background: #fff;
+            border: 2px solid #003f88;
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 28px;
+            box-shadow: 6px 6px 0px #003f88;
+        }
+ 
+        .question-card .q-label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #003f88;
+            opacity: 0.5;
+            margin-bottom: 6px;
+        }
+ 
+        .question-card .q-text {
+            font-size: 18px;
+            font-weight: 800;
+            color: #003f88;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+ 
+        .option-row {
+            margin-bottom: 14px;
+        }
+ 
+        .option-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+ 
+        .option-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: #00296b;
+        }
+ 
+        .option-stats {
+            font-size: 13px;
+            font-weight: 600;
+            color: #003f88;
+            opacity: 0.7;
+        }
+ 
+        .bar-bg {
+            height: 10px;
+            background: #e3eaf7;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+ 
+        .bar-fill {
+            height: 100%;
+            background: #003f88;
+            border-radius: 10px;
+            transition: width 0.8s ease;
+        }
+ 
+        .winner-tag {
+            display: inline-block;
+            background: #fdc500;
+            color: #003f88;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-left: 8px;
+            vertical-align: middle;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+ 
+     
+        .publish-section {
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+ 
+        #publish-btn {
+            background-color: #fdc500;
+            color: #003f88;
+            padding: 14px 36px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 6px 6px 0px #003f88;
+            font-weight: 900;
+            font-size: 16px;
+            cursor: pointer;
+            transition: color 0.2s ease, transform 0.1s ease;
+        }
+ 
+        #publish-btn:hover { color: #d1495b; }
+        #publish-btn:active { transform: translate(2px, 2px); box-shadow: 4px 4px 0px #003f88; }
+ 
+        #publish-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+ 
+        .published-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #003f88;
+            color: #fdc500;
+            padding: 12px 28px;
+            border-radius: 15px;
+            font-weight: 800;
+            font-size: 15px;
+        }
+ 
+        .loading {
+            text-align: center;
+            padding: 80px;
+            font-size: 18px;
+            color: #003f88;
+            opacity: 0.6;
+        }

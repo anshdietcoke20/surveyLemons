@@ -1,0 +1,171 @@
+* {
+margin : 0;
+padding : 0;
+box-sizing : border-box;
+}
+html,
+body {
+ height: 100%;
+ width: 100%;
+ background-color:#003f88;
+ color: #fdc500;
+ font-family: sans-serif;
+ text-align: center;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+
+.card-stack{
+     position: relative;
+    z-index: 1;
+    min-height: 400px;
+     height: auto;
+    width: 400px;
+    color: #00296b;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);    
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+   perspective: 1000px;
+}
+
+.card-stack *{
+    position: relative;
+    z-index: 1;
+}
+
+.card-stack::before{
+    content: "";
+    position: absolute;
+     inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1623116135497-a90bdc0ddca9?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNhcnRvb24lMjBkb29kbGV8ZW58MHx8MHx8fDA%3D');
+    background-position: center;
+    background-size: contain;
+    filter: blur(4px);
+}
+
+.card-stack input{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+   border-radius: 10px;
+   border: transparent;
+}
+
+.card{
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 20px;
+
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    transform: rotateY(90deg);
+}
+
+.card.active{
+    transform: rotateY(0deg);
+}
+
+.card.flip-out{
+    transform: rotateY(-90deg);
+}
+
+.question-input{
+    width: 85%;
+    margin-top: 10px;
+    padding: 10px;
+    width: 80%;
+}
+ 
+#options{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+}
+
+.pick{
+    box-sizing: border-box;
+}
+
+#options input{
+    padding: 10px;
+    width: 300px;
+}
+
+.toggle-row{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-row label{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #00296b;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.toggle-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #003f88;
+}
+
+.bottom-bar{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.bottom-bar button{
+     background-color: #fdc500;
+    color: #003f88;
+    padding: 10px;
+    border: transparent;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);    
+     font-weight: bolder;
+     cursor: pointer;
+     margin-top: 20px;
+     transition: color 0.2s ease;
+}
+
+.bottom-bar button:hover{
+   color: #d1495b;
+}
+
+#mandatory-popup{
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #d1495b;
+    color: whitesmoke;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: bold;
+    z-index: 999;
+}
